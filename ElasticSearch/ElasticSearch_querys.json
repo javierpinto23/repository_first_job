@@ -1,0 +1,210 @@
+/** THIS IS FOR KNOW ALL THE REPORT GENERATE IN KIBANA **/
+
+GET /.reporting-2023-11-19/_search
+{
+  "_source": [
+    "attempts",
+    "jobtype",
+    "created_at",
+    "created_by",
+    "completed_at",
+    "status",
+    "started_at",
+    "timeout",
+    "process_expiration",
+    "output.size",
+    "output.warnings",
+    "output.max_size_reached"
+    ],
+  "query": {
+    "bool": {
+      "filter": [
+        {"range": {
+          "started_at": {
+            "gte": "now-1d",
+            "lte": "now"
+          }
+        }},
+        {
+          "term": {
+            "created_by": "priyadarshini.mohan@adidas.com"
+          }
+        }
+      ]
+    }
+  }, 
+  "size": 100
+}
+
+/** THIS IS FOR CREATE A NEW INDEX **/
+
+PUT /index_name
+{
+  "settings": {
+    "number_of_shards": "1",
+    "number_of_replicas": "1",
+    "mapping.nested_fields.limit": 5000,
+    "mapping.total_fields.limit": 5000,
+    "max_docvalue_fields_search": 5000
+  },
+  "mappings": {
+    "properties": {
+      "article_no": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "item_created_date": {
+        "type": "date"
+      },
+      "item_id": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "item_key": {
+        "type": "keyword"
+      },
+      "item_modified_date": {
+        "type": "date"
+      },
+      "item_status": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "local_size": {
+        "type": "keyword"
+      },
+      "mask_modified_date": {
+        "type": "date"
+      },
+      "mask_modify_user": {"type": "keyword"},
+      "organization_code": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "sfty_factor": {"type": "keyword"}
+    }
+  }
+}
+
+/** THIS IS FOR ADDING A NEW MAPPING **/
+
+PUT name_index/_mapping
+{
+  "properties":{
+    "name_field": {
+      "type": "keyword"
+    }
+  }
+}
+
+/** THIS IS FOR EXECUTE A UPDATE_BY_QUERY **/
+
+GET _tasks/jrlkAr-yQn-6EL5egb50zw:218227994
+POST index_name/_update_by_query?wait_for_completion=false&slices=1
+{
+  "script": {
+    "source": "ctx._source['field_name'] = 'value'"
+  },
+  "query": {
+    "bool": {
+      "must": [],
+      "filter": [
+        {
+          "match_phrase": {
+            "order_no": "AINX1000007"
+          }
+        }
+      ],
+      "should": [],
+      "must_not": []
+    }
+  }
+}
+
+/** THIS IS QUERY EXAMPLE WITH AGGREGATIONS **/
+
+GET /inddxs_bame/_search
+{
+  "size": 0,
+  "query": {
+    "bool": {
+      "must": [],
+      "filter": [
+        {
+          "range": {
+            "date_order_created_omni": {
+              "format": "strict_date_optional_time",
+              "gte": "now-4h",
+              "lte": "now-10m"
+            }
+          }
+        },
+        {
+          "match_phrase": {
+            "status_desc": "Cancelled"
+          }
+        },
+        {
+          "exists": {
+            "field": "orig_ordered_qty"
+          }
+        },
+        {
+          "exists": {
+            "field": "cancelled_qty"
+          }
+        }
+      ],
+      "should": [],
+      "must_not": []
+    }
+  },
+  "aggs": {
+    "group_by_market": {
+      "terms": {
+        "field": "tags"
+      },
+      "aggs": {
+        "sum_orig_qty": {
+          "sum": {
+            "field": "orig_ordered_qty"
+          }
+        },
+        "sum_cancelled_qty": {
+          "sum": {
+            "field": "cancelled_qty"
+          }
+        },
+        "calculo_division": {
+          "bucket_script": {
+            "buckets_path": {
+              "totalField1": "sum_cancelled_qty",
+              "totalField2": "sum_orig_qty"
+            },
+            "script": "Math.round(100*params.totalField1 / params.totalField2)"
+          }
+        }
+      }
+    }
+  }
+} 
