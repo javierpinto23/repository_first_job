@@ -1,0 +1,11 @@
+COMMAND TO DO DEPLOY AND CREATED AND UP THE LAMBDA FUNCTION EN AWS CONSOLE
+Yarn build
+Sam build -t <name-file.yml>
+sam deploy -t <name-file.yml> -g
+
+COMMAND TO TRANSLATE THE LANGUAJE FROM TYPESCRIPT TO JAVASCRYPT
+Yarn build
+Sam build 
+
+COMMAND TO DOING A SAM  DEPLOY USING ENVIRONMENT VARIABLES
+sam deploy -t  --stack-name ecomAutomation-v2 --config-env development --capabilities CAPABILITY_IAM CAPABILITY_AUTO_EXPAND --parameter-overrides environment=dev accessKeyId=AKIASQHFTRRRS74BDON5 secretAccessKey=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 --resolve-s3

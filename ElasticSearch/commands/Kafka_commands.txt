@@ -1,0 +1,11 @@
+	- COMMANDS TO RUN AND EXECUTE ZOOKEEPER LOCALLY
+	/usr/local/bin/zookeeper-server-start /usr/local/etc/zookeeper/zoo.cfg
+	
+	- COMMANDS TO RUN AND EXECUTE KAFKA LOCALLY
+	/usr/local/bin/kafka-server-start /usr/local/etc/kafka/server.properties
+	
+	1) COMMAND TO SCALE REPLICAS OF THE KAFKA STREAMING
+	kubectl -n bam scale sts <KAFKA_STREAM_NAME> --replicas=0
+	
+	2) COMMAND TO EDIT REPLICAS OF THE KAFKA STREAMING
+	kubectl -n bam edit sts <KAFKA_STREAM_NAME> 

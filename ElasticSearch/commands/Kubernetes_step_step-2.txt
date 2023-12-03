@@ -1,0 +1,31 @@
+-COMMAND TO DOWNLOAD A ELASTIC IMAGE AND CREATE A CONTAINER LOCALLY
+podman run --name es01-test --net elastic -p 127.0.0.1:9200:9200 -p 127.0.0.1:9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:7.17.6
+
+-COMMAND TO DOWNLOAD A KIBANA IMAGE AND CREATE A CONTAINER LOCALLY
+Podman run --name kib01-test --net elastic -p 127.0.0.1:5601:5601 -e "ELASTICSEARCH_HOSTS=http://es01-test:9200" docker.elastic.co/kibana/kibana:7.17.6
+
+-STEP BY STEP TO USING WHERE SOME PIPELINE IS STUCK
+	1) kubectl -n bam exec -it <NAME_POD> bash
+	2) cd oms_db_lastrun/
+	3) cat <NAME_WHERE_BE_THE_FIELD example: logstash-lines_history_status_lam_lamcomli.lastrun>
+	4) echo "--- DATE _WHAT_I_WANT_CHANGED"  >  <NAME_WHERE_BE_THE_FIELD example: logstash-lines_history_status_lam_lamcomli.lastrun>
+	5) DELETE THE POD AND IT WILL  REESTART BY ITSSELF
+
+-STEP BY STEP TO USING FOR CHANGE THE SCHDEULE OF THE PIPELINES GO INSIDE OF THE CONFIG MAP
+	1) kubectl config use-context <CONTEXT_NAME>
+	2) Kubectl -n <NAMESPACE> get configmaps
+	3) Search the configmap of jdbc-conf-files
+	4) Kubectl -n <BAMESPACE> edit configmap <CONFIGMAP_NAME>:
+	5) Use (ESC + : + /<NAME_PIPELINE>) and after click in "N"
+	6) Click in "i" to activate the insert mode in the configmap
+	7) MODIFACATE THE PROPERTIES WHAT I REQUIRED
+	8) Use the comand (ESC + : + WQ!) to exit and save the change or (ESC + : Q!) to exit without save the changes
+	9) Kubectl -n <NAMESPACE> get pod
+	10) Search the Pod name and copy
+	11) Kubectl -n <NAMSPACE> delete pod <NAME_POD>
+	12) Confirm the pod recreated
+	13) Kubectl -n <NAMESPACE> exec -it <NAME_POD> bash
+	14) Go inside config_files folder
+	15) Search the pipiline file with extention .conf
+	16) Cat <PIPELINE_FILE>
+	17) Confirm that changes was applied

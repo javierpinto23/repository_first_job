@@ -1,0 +1,62 @@
+	1) SEARCH DE CONTEXT AND NAMESPACE IN THE NEXT LINK:
+	https://confluence.tools.3stripes.net/pages/viewpage.action?spaceKey=BAM&title=Kubernetes+infrastructure
+	
+	2) COMMAND THAT ALLOW ME TO CHOOSE THE CONTEXT:
+	Kubectl config use-context <NAME_CONTEXT>
+	
+	3) COMMAND THAT ALLOW ME TO LIST ALL THE PODS OR DEPLOY (depend where are what you need)
+	Kubectl -n <NAME_NAMESPACE> get pods
+	Kubectl -n <NAME_NAMESPACE> get deploy
+	
+	4) COMMAND THAT ALLOW ME TO MAKE PORT FORWARD
+	Kubectl -n <NAME_NAMESPACE> port-forward <POD_NAME> 1522:80 
+	NOTA 1: ports to connects, local: 1522 and port pod: 80
+	NOTA 2: after the running the before commands it is neccesary to open a new tab terminal to running the next commands
+	
+	5) COMMAND HELP ME ACCESS TO SECRETS FILES
+	kubectl -n <NAME_NAMESPACE> get secrets
+	
+	6) FIND NAME OF SECRETS (look in config folder in the fields with groovy extention for the enviroment that i need, look the secret name in the variable call JDBC_USER_<NAME-MARKET>_SECRET)
+	
+	7) AFTER RUN THE NEXT COMMAND:
+	kubectl -n <NAME_NAMESPACE> get secrets <NAME_SECRET> -o yaml
+	
+	8) LOOK AND SELECT THE ENCRYPTED PASSWORD AND USERNAME
+	
+	9) AFTER RUNNING THE NEXT COMMANDS TO DECODE THE USSER AND PASSWORD TO ACCESS TO DATA BASE:
+	
+	echo <PASSWORD> | base64 --decode
+	NOTA: look, get and save the username and password
+	
+	10) GET SERVICE NAME: GO YO VISUAL STUDIO CODE AND SEARCH THE FIELD WITH groovy EXTENTION AND GO TO THE END OF THE LINE JDBC_CONN_STRING_?? IN THE ENVIAROMENT YOU NEED
+	
+	11) AFTER GO TO DBeaver and MAKES THE CONNECTION WITH THE DATA BASE AND USE IT HOW YPU NEED
+
+	12) REMENBER CREATE THE CONNECTION AND DO NOT FORGET TEST THE CONNECTION BEFORE TO FINISH OF BUILDING THE CONNECTION
+	
+	13) THIS COMMAND ALLOW ME TO LOOK THE LOGS WHEN A PIPELINE IS RUNNING
+	kubectl -n <name_space> logs -f <name_pods>
+	
+	14) COMMAND TO GET THE INFORMATION OF THE PODS
+	kubectl -n bam-pro describe pod <name_pod>
+	
+	15) COMMAND TO GET THE VERSION OF THE POD 
+	kubectl -n <NAME-SPACE> describe pod <name_pod>|grep version
+	
+	16) COMMAND TO GET THE JOBS
+	kubectl -n <name_space> get jobs
+	
+	17) COMMAND TO DELETE THE JOBS
+	kubectl -n <name_space> delete jobs <name_reprocess_jobs>
+	
+	18) COMMAND TO GO INSIDE OF A PODS 
+	kubectl -n bam exec -it <NAME_POD> bash
+	
+	19) COMMAND TO SCALE REPLICAS OF THE DEPLOYMENTS
+	kubectl -n bam scale deployment <DEPLOY_NAME> --replicas=0
+	
+	
+	
+	
+	
+	
