@@ -1,0 +1,74 @@
+THESE ARE THE URLS TO ACCESS TO EACH KIBANA ENVIRONMET:
+
+- GLOBAL MARKETS:
+    - DEV: https://kibana-omni.dev.bam.3stripes.net/spaces/space_selector
+    - STG: https://kibana-omni.int.bam.3stripes.net/spaces/space_selector
+    - PRD: https://kibana-omni.bam.3stripes.net/spaces/space_selector
+    - PG: https://kibana-omni.pg.bam.3stripes.net/app/home#/ 
+
+- CHINA MARKET:
+    - DEV: https://kibana-omni.dev.bam.adidas.com.cn/spaces/space_selector
+    - STG: https://kibana-omni.int.bam.adidas.com.cn/spaces/space_selector
+    - PRD: https://kibana-omni.bam.adidas.com.cn/spaces/space_selector
+
+
+THESE ARE THE URLS TO ACCESS TO EACH KAFKA ENVIRONMET IN LENSES:
+
+- GLOBAL MARKETS:
+    - DEV: https://lenses.dev.pivotal.emea.kaas.3stripes.net/login.html?redirect=/lenses/#/
+    - STG: https://lenses.sit.pivotal.emea.kaas.3stripes.net/login.html
+    - PRD: https://lenses.pro.pivotal.emea.kaas.3stripes.net/login.html?redirect=/lenses#
+
+- CHINA MARKET:
+    - STG: https://lenses.sit.beijing.public.kaas.adidas.com.cn/login.html?redirect=/#
+    - PRD: https://lenses.pro.beijing.public.kaas.adidas.com.cn/login.html?redirect=/#
+
+
+THIS IS THE URL TO ACCESS TO SUPPORT JIRA BOARD: https://jira.tools.3stripes.net/secure/RapidBoard.jspa?rapidView=15028&quickFilter=29668
+
+THIS IS THE URL TO ACCESS TO SPRINTs JIRA BOARD: https://jira.tools.3stripes.net/secure/RapidBoard.jspa?rapidView=61482&view=planning.nodetail&issueLimit=100
+
+THIS IS THE URL TO ACCESS TO BITBICKET REPOSITORYS: https://bitbucket.tools.3stripes.net/projects
+
+THIS IS THE URL TO ACCESS TO BAM CONFLUENCE: https://confluence.tools.3stripes.net/display/BAM
+
+THIS IS THE URL TO ACCESS TO CI/CD INFRAESTRUCTURE CONFLUENCE PAGE: https://confluence.tools.3stripes.net/display/BAM/CICD+infrastructure
+
+
+THESE ARE SOME URLs TO ACCESS TO JENKIS AND SOME OF ITS JOBS:
+ - JENKIS MAIN PAGE: https://bam.jenkins.tools.3stripes.net/login?from=%2Fjob%2FBAM2.0%2F
+ - JENKIS_CLUSTER-BAM: https://boost.jenkins.tools.3stripes.net/login?from=%2Fjob%2FFDP%2Fjob%2FConnect%2Fjob%2FConnect-clusters%2Fjob%2Fcluster-bam%2F
+- JENKIS DEPLOYE CREDENTIALS IN KUBERNETES: https://bam.jenkins.tools.3stripes.net/login?from=%2Fjob%2FBAM2.0%2Fjob%2FTools%2Fjob%2FPlatform%2Fjob%2FDeploy_credentials_to_kubernetes%2F1616%2F
+
+
+THESE ARE THE URLs TO MONITORING TOOLs:
+- E-MAL SUPPORT: https://outlook.office.com/mail/HE_BAM_SUPPORT@adidas-group.com/inbox/id/AAQkADEzNDM2ZThmLWJkNWMtNGQ5NC1iOTdjLWQxM2ZlNWJjOGEyMAAQAHwfAp5d0SRFulRkLR0SmCg%3D
+- TECHMON GLOBAL PRD: https://kibana.techmon.3stripes.net/app/management/opensearch-dashboards/indexPatterns
+- TECHMON GLOBAL STG,DEV: https://kibanastg.techmon.3stripes.net/app/home#/
+- TECHMON CHINA PRD: https://kibana.techmon.adidas.com.cn/app/management/opensearch-dashboards/indexPatterns
+- GRAFANA GLOBAL: https://grafana.techmon.3stripes.net/dashboards
+- GRAFANA CHINA: https://grafana.techmon.adidas.com.cn/dashboards
+
+OTHERs URLs:
+- VENAFI: https://cert-manager.adidas.com/aperture/tls-protect/certificates/Status:Managed/
+- ARTIFACTORY: https://artifactory.tools.3stripes.net/ui/repos/tree/General/npm-local
+- UDEMY ACCOUNT: https://adidas-itlearning.udemy.com/organization/home/
+- USERs AZURE: https://portal.azure.com/#view/Microsoft_AAD_UsersAndTenants/UserManagementMenuBlade/~/AllUsers
+- ACTIVE DIRECTORYs AZURE: https://portal.azure.com/#view/Microsoft_AAD_IAM/GroupsManagementMenuBlade/~/AllGroups
+
+THESE ARE THE URLs TO ACCESS GENERAL INFORMATION:
+    - ASPEN ACCOUNT: https://adidasaspen.service-now.com/serviceshop?id=index
+    - DATA SCIENCE COMMUNITY: https://adidasgroup.sharepoint.com/sites/KnowledgeTransfer
+    - CITRIX: https://internal.emea.adsint.biz/Citrix/internalemeaWeb/
+
+    - HR CONFLUENCE PAGE: https://adidasgroup.sharepoint.com/sites/HRPortalColombia/SitePages/Home.aspx?xsdata=MDV8MDF8fDE2MTNhZjY5NWUxYjQ5NWQyN2Y0MDhkYjNiNmE0YTMzfDNiZmViMjIyZTQyYzQ1MzVhYWNlZWE2Zjc3NTEzNjlifDB8MHw2MzgxNjkwOTk5MDA0OTU4NjB8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKV0lqb2lNQzR3TGpBd01EQWlMQ0pRSWpvaVYybHVNeklpTENKQlRpSTZJazkwYUdWeUlpd2lWMVFpT2pFeGZRPT18MXxNVFk0TVRNeE16RTRPVEEyTWpzeE5qZ3hNekV6TVRnNU1EWXlPekU1T2pKbVpEZzBaVGRqTFdZeU5EUXROR0k0WkMwNE9EaGxMV05rTURsbFkyVmxZamN4Wmw4ek5qY3dOV1ZpWmkwNE9HTTFMVFF6WVdNdFlqVXlPUzAzTVRWbU5ETm1PR1poTXpSQWRXNXhMbWRpYkM1emNHRmpaWE09fGIyMDI2MDgxNjQ1NjRiMGEyN2Y0MDhkYjNiNmE0YTMzfDExODQ0YjE4MDZlYzQ1YWZiYjQ0N2IzNzM2NzY4OGY2&sdata=OFpJeVZsWG4vQUVkaCtvazRZQVVpTEVUbE92eWJMam9takhsMmdJSUwybz0%3d&ovuser=3bfeb222-e42c-4535-aace-ea6f7751369b%2cJavier.Pinto%40adidas.com&OR=Teams-HL&CT=1695239166273&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiIyOC8yMzA4MDQwODYzNiIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3d%3d&SafelinksUrl=https%3a%2f%2fadidasgroup.sharepoint.com%2fsites%2fHRPortalColombia%2fSitePages%2fHome.aspx
+    
+    - ADECCO TO AUTO DOWNLOAD CERTIFICATES: https://adidasis.adecco.com.co/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Daocore5%26redirect_uri%3Dhttps%253A%252F%252Fadidasao.adecco.com.co%252Fauthentication%252Flogin-callback%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520openid%2520email%2520profile%2520AdeccoOnlineAPI%26state%3D697b8bb45d1d4422950d3a03af79e241%26code_challenge%3D8mIaQgPIKXMbXYJqOCW3XFde2K5doWIJQzTQ5voTvx0%26code_challenge_method%3DS256%26response_mode%3Dquery
+
+    - WORK ABROAD: https://adidasgroup.sharepoint.com/sites/Cross-BorderEmployment
+    - ADIDAS MENTORING PROGRAM: https://adidasgroup.sharepoint.com/sites/amp
+    - SECURE CODE WARRIOR: https://portal.securecodewarrior.com/#/login
+    - TRANSLATE: https://www.deepl.com/es/translator
+
+    - DIGITAL SALES SOLUTIONS CONFLUENCE PAGE: https://adidasgroup.sharepoint.com/sites/DigitalSalesSolutions/SitePages/Solutions-and-Initiatives.aspx?xsdata=MDV8MDF8fDQ2MjRhYWU3MjQ5OTQ4ODI5OTJkMDhkYTkwMjA0ZGVjfDNiZmViMjIyZTQyYzQ1MzVhYWNlZWE2Zjc3NTEzNjlifDB8MHw2Mzc5ODA3NjU2NDcwNTEwNTN8R29vZHxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKV0lqb2lNQzR3TGpBd01EQWlMQ0pRSWpvaVYybHVNeklpTENKQlRpSTZJazkwYUdWeUlpd2lWMVFpT2pFeGZRPT18MXxNVGs2TW1aa09EUmxOMk10WmpJME5DMDBZamhrTFRnNE9HVXRZMlF3T1dWalpXVmlOekZtWHpNMk56QTFaV0ptTFRnNFl6VXRORE5oWXkxaU5USTVMVGN4TldZME0yWTRabUV6TkVCMWJuRXVaMkpzTG5Od1lXTmxjdz09fHw%3D&sdata=UUZzbXZyeHFJTDFHQ0R1WjhCenY5ZTFJZHJ1UWVKVnBFQ3pRSlhLYnVvUT0%3D&ovuser=3bfeb222-e42c-4535-aace-ea6f7751369b%2CJavier.Pinto%40adidas.com&OR=Teams-HL&CT=1663691840557&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiIyOC8yMjA3MzEwMTAwNyIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D
+
