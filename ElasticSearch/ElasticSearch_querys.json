@@ -208,3 +208,12 @@ GET /inddxs_bame/_search
     }
   }
 } 
+
+/** THIS QUERY IS TO ADDING AN ALIAS TO AN INDEX **/
+
+POST _aliases
+{
+  "actions" : [
+        { "add" : { "index" : "NAME_INDEX", "alias" : "ALIAS_NAME" } }
+    ]
+}
